@@ -1,0 +1,23 @@
+district:
+  name: "Illustrative Demo District"
+  state: "Demo State"
+  country: "India"
+  timezone: "Asia/Kolkata"
+  latitude: 22.46
+  longitude: 70.07
+  boundary_status: "illustrative_only"
+  population_reference: null
+  population_reference_year: null
+zones:
+  - id: ZONE_01
+    name: "Illustrative North Zone"
+    latitude: 22.48
+    longitude: 70.05
+  - id: ZONE_02
+    name: "Illustrative Central Zone"
+    latitude: 22.46
+    longitude: 70.07
+  - id: ZONE_03
+    name: "Illustrative Industrial Zone"
+    latitude: 22.44
+    longitude: 70.09

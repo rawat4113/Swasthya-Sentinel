@@ -1,0 +1,2 @@
+zone_id,observed_at,temperature_c,humidity_pct,apparent_temperature_c,aqi,pm25,pm10,no2,source_detail
+ZONE_01,2026-11-18T10:00:00,34,65,37,,28,45,,Example source or provider

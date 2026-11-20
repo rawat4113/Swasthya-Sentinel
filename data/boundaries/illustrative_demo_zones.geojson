@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "name": "Illustrative Demo Zones - Not Official Boundaries",
+  "features": [
+    {"type":"Feature","properties":{"zone_id":"ZONE_01","name":"Illustrative North Zone","boundary_status":"illustrative_only"},"geometry":{"type":"Polygon","coordinates":[[[70.035,22.475],[70.060,22.475],[70.060,22.490],[70.035,22.490],[70.035,22.475]]]}},
+    {"type":"Feature","properties":{"zone_id":"ZONE_02","name":"Illustrative Central Zone","boundary_status":"illustrative_only"},"geometry":{"type":"Polygon","coordinates":[[[70.055,22.450],[70.080,22.450],[70.080,22.470],[70.055,22.470],[70.055,22.450]]]}},
+    {"type":"Feature","properties":{"zone_id":"ZONE_03","name":"Illustrative Industrial Zone","boundary_status":"illustrative_only"},"geometry":{"type":"Polygon","coordinates":[[[70.080,22.430],[70.105,22.430],[70.105,22.450],[70.080,22.450],[70.080,22.430]]]}}
+  ]
+}

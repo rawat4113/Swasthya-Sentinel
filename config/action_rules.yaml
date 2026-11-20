@@ -1,0 +1,12 @@
+heat:
+  responsible_role: "Occupational Health and Safety Officer"
+  actions:
+    - "Review access to drinking water, shade and cooling facilities."
+    - "Review recovery breaks and high-exposure work schedules."
+    - "Verify aggregated health-service reports with the appropriate health team."
+respiratory:
+  responsible_role: "Environmental Officer"
+  actions:
+    - "Verify the air-quality station reading and observation timestamp."
+    - "Assess environmental and workplace exposure controls."
+    - "Coordinate appropriate public-health and healthcare readiness."

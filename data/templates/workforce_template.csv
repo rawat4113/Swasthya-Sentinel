@@ -1,0 +1,2 @@
+zone_id,observed_at,shift,exposed_workers,heat_complaints,respiratory_complaints,first_aid_cases,absence_count,source_detail
+ZONE_01,2026-11-18T10:00:00,Day,100,3,2,1,4,Example source or provider

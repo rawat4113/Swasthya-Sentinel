@@ -1,0 +1,39 @@
+Swasthya Sentinel - Department Application Edition
+Build date: 2026-11-20
+
+Verified in the build environment:
+- Automated backend/API/security test suite: 24 passed.
+- Python compilation: backend modules, all dashboard pages, scripts and tests compile successfully.
+- Live FastAPI smoke test: /health returned status=healthy.
+- Authentication smoke test: Health Department demo account signed in and received an expiring bearer token.
+- Protected data smoke test: authenticated account retrieved the configured 3 monitoring zones.
+- End-to-end manual input smoke test: Health Department submitted an aggregated observation; backend committed it and attributed it to the health account.
+- Submission history smoke test: the submitting account could see its own import history.
+- Role enforcement tests: unauthenticated API data/write requests are rejected, department category restrictions work, and simulation requires the administrator role.
+- Admin user-management test: administrator created a department account, which then signed in successfully.
+- Synthetic offline datasets: 180 days x 3 illustrative zones = 540 records in each environment, health and workforce CSV dataset.
+- Database initialization and demo-account seeding completed successfully.
+
+Frontend verification limitation:
+- Streamlit >=1.36 is declared in requirements.txt and all dashboard Python files pass syntax compilation.
+- Streamlit could not be installed in this build container because package-index DNS/network access failed. Therefore the browser UI was not launched or visually verified in this environment. Install requirements.txt locally and run the provided Windows launcher to launch it.
+
+Local demo credentials:
+- admin / Admin@Sentinel2026
+- health / Health@Sentinel2026
+- environment / Env@Sentinel2026
+- workplace / Work@Sentinel2026
+
+Security boundary:
+- Seeded credentials and the included signed-token authentication are for local MVP demonstrations only.
+- Rotate AUTH_SECRET_KEY, change seeded credentials, disable demo-user seeding and arrange a security review before shared/public deployment.
+- The district administrator can create and deactivate department accounts. Public self-registration is disabled.
+
+Data/clinical limitation:
+- The included monitoring zones and GeoJSON are illustrative, not official administrative boundaries.
+- Health-service and workforce records are synthetic and aggregated.
+- OpenAQ requires an API key. Open-Meteo weather refresh needs network access. CPCB AQI may be imported from a sourced official CSV/export.
+- Risk coefficients and alert thresholds are prototype parameters, not clinically validated thresholds.
+Map tile fix: Geographic Intelligence now defaults to OpenStreetMap instead of Carto dark tiles, so no Carto API key is required. Map tiles still require browser internet access.
+
+Frontend theme update: Streamlit theme is now light with a deep-navy department sidebar, teal primary actions, white KPI/cards and Plotly light charts. Existing OpenStreetMap basemap and department-login workflows are preserved.

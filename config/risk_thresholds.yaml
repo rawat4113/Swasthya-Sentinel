@@ -1,0 +1,10 @@
+# Prototype display bands only; not official medical or occupational thresholds.
+normal: 29
+watch: 49
+elevated: 69
+high: 70
+alert_score: 50
+alert_min_independent_signal_families: 2
+alert_cooldown_hours: 12
+heat_weights: {environment: 0.40, clinical: 0.35, workforce: 0.25}
+respiratory_weights: {environment: 0.40, clinical: 0.35, workforce: 0.25}
