@@ -2,7 +2,19 @@ import os
 import requests
 import streamlit as st
 
-BASE_URL = os.getenv('API_BASE_URL', 'http://127.0.0.1:8001').rstrip('/')
+
+def _get_base_url() -> str:
+    try:
+        if 'API_BASE_URL' in st.secrets:
+            url = str(st.secrets['API_BASE_URL']).rstrip('/')
+            os.environ['API_BASE_URL'] = url
+            return url
+    except Exception:
+        pass
+    return os.getenv('API_BASE_URL', 'http://127.0.0.1:8001').rstrip('/')
+
+
+BASE_URL = _get_base_url()
 
 
 def _headers():
@@ -12,7 +24,7 @@ def _headers():
 
 def api_get(path, params=None):
     try:
-        response = requests.get(BASE_URL + path, params=params, headers=_headers(), timeout=15)
+        response = requests.get(BASE_URL + path, params=params, headers=_headers(), timeout=60)
         response.raise_for_status()
         return response.json()
     except Exception as exc:
